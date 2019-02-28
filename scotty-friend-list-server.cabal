@@ -1,0 +1,54 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 8be85968264886a2283f4d7add575447ff9d7c30f28f0974fd8e4c454681bf44
+
+name:           scotty-friend-list-server
+version:        0.1.0.0
+homepage:       https://github.com/zkourouma/scotty-friend-list-server#readme
+bug-reports:    https://github.com/zkourouma/scotty-friend-list-server/issues
+author:         Zack Kourouma
+maintainer:     zack@kourouma.me
+copyright:      2019 Zack Kourouma
+license:        BSD3
+build-type:     Simple
+data-files:
+    data/friends.json
+
+source-repository head
+  type: git
+  location: https://github.com/zkourouma/scotty-friend-list-server
+
+library
+  exposed-modules:
+      Friend
+  other-modules:
+      Paths_scotty_friend_list_server
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -threaded -O2 -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , text
+  default-language: Haskell2010
+
+executable server
+  main-is: Main.hs
+  other-modules:
+      Paths_scotty_friend_list_server
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -threaded -O2 -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , scotty
+    , scotty-friend-list-server
+    , text
+  default-language: Haskell2010

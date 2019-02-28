@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "socrates",
+    "nickName": "taz"
+  },
+  {
+    "id": 2,
+    "name": "plato",
+    "nickName": "to"
+  },
+  {
+    "id": 3,
+    "name": "aristotle",
+    "nickName": "ari"
+  },
+  {
+    "id": 4,
+    "name": "sophocles",
+    "nickName": "sophist"
+  }
+]
